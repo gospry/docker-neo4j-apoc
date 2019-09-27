@@ -8,6 +8,9 @@ ENV APOC_VERSION 3.5.0.4
 ENV APOC_FILE apoc-$APOC_VERSION-all.jar
 ENV APOC_URI https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/$APOC_VERSION/$APOC_FILE
 ENV NEO4J_dbms_security_procedures_unrestricted=apoc.\\\*
+ENV NEO4J_dbms_security_procedures_whitelist=apoc.\\\*
+ENV NEO4J_db_temporal_timezone=America/Costa_Rica
+ENV NEO4J_apoc_ttl_enabled=true
 
 RUN mv plugins /plugins \
     && ln --symbolic /plugins
